@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send('Backend is running successfully!');
 });
 
+app.get('/api/health', (req, res) => {
+    res.json({ status: 'Backend is healthy' });
+  });
+  
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
